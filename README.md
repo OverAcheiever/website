@@ -4,7 +4,7 @@
 
 **Overview:** As part of our Solana Foundation Grant, we are building a dedicated landing page/portal for members and clients to join and work with Dean’s List 
 
-**The goal of creating this is to **
+**The goal of creating this is to**
 - Make it easier for a new member to join the serviceDAO
 - Make it easier for a client to engage the serviceDAO 
 - Showcase what we do in this serviceDAO
@@ -42,7 +42,7 @@ Acquire 1 DEAN  - same as above
 
 Signup and Discord link – ideally this is a web3 powered form (token gated by DEAN), but we could use the same process we use for bounty creation or a google form. The goal here is to get some onboarding data about the member. 
 
-** The below features are for future roadmap or can be part of the first phase if they are not difficult/time consuming **
+**The below features are for future roadmap or can be part of the first phase if they are not difficult/time consuming**
 
 Admin Panel:
 
