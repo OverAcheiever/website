@@ -43,7 +43,7 @@ export const packages: Package[] = [
     id: "MAIN",
     name: "The Main Event",
     perks: [true, true, true, false],
-    price: 25,
+    price: 2500,
   },
   {
     id: "MEGA",
