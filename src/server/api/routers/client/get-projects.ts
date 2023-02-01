@@ -14,6 +14,8 @@ export const getProjects = publicProcedure
         projects: {
           select: {
             name: true,
+            package: true,
+            status: true,
           },
         },
       },

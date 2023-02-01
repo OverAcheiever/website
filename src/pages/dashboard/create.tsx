@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import Layout from "@/components/dashboard/Layout";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/solid";
-import type { ChangeEvent } from "react";
+import { ChangeEvent, useEffect } from "react";
 import { useState } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import {
@@ -13,57 +13,16 @@ import { connection, TREASURY_MINT, USDC_MINT } from "@/constants";
 import { Transaction } from "@solana/web3.js";
 import { toast } from "react-hot-toast";
 
+import { perks, packages } from "../../../packages";
+import Pay from "@/components/dashboard/create/Pay";
+import { api } from "@/utils/api";
+
 const Create = () => {
-  const perks: {
-    name: string;
-    description?: string;
-  }[] = [
-    {
-      name: "Soladex.io Review",
-    },
-    {
-      name: "Feedback",
-      description:
-        "Our signature review and feedback from our team of power users! 2 weeks of community deep diving united into one final document of improvements and feature requests to take your protocol to the next level",
-    },
-    {
-      name: "Extended Feedback",
-      description:
-        "Extended Feedback for 3 months! Our users continue giving feedback and your team can expect high usage and responsiveness from our dedicated power user team",
-    },
-    {
-      name: "AMA",
-      description:
-        "AMA with Whale's Friend. A one-on-one interview with Solana's OG influencer, delivered as a YouTube video for high visibility and easy-to-cut sections of interest for your marketing team",
-    },
-  ];
-
-  const packages: {
-    name: string;
-    perks: boolean[];
-    price: number;
-  }[] = [
-    {
-      name: "Starter Package",
-      perks: [true, true, false, false],
-      price: 1000,
-    },
-    {
-      name: "The Main Event",
-      perks: [true, true, true, false],
-      price: 2500,
-    },
-    {
-      name: "Mega Package",
-      perks: [true, true, true, true],
-      price: 3500,
-    },
-  ];
-
   const [selected, setSelected] = useState<number>(1);
   const [name, setName] = useState<string>();
   const [description, setDescription] = useState<string>();
   const [contact, setContact] = useState<string>();
+  const [transaction, setTransaction] = useState<string>();
 
   const nameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -77,38 +36,42 @@ const Create = () => {
     setContact(e.target.value);
   };
 
-  const { sendTransaction, publicKey } = useWallet();
+  const { data, mutate } = api.client.createProject.useMutation({
+    onError(error) {
+      console.log(error);
+      toast.error("A fatal error occoured, please contact us on Discord");
+    },
+    onSuccess: () => {
+      toast.success("Feedback Request Created");
+      window.location.href = "/dashboard";
+    },
+  });
 
-  const pay = () => {
-    console.log(publicKey, packages[selected]!.price);
-    (async () => {
-      const fromATA = getAssociatedTokenAddressSync(USDC_MINT, publicKey!);
-      const toATA = getAssociatedTokenAddressSync(USDC_MINT, TREASURY_MINT);
+  const { publicKey } = useWallet();
 
-      const mint = await getMint(connection, USDC_MINT);
-
-      console.log(mint.decimals);
-
-      const blockhash = await connection.getLatestBlockhash("confirmed");
-      const transaction = new Transaction({
-        recentBlockhash: blockhash.blockhash,
-      }).add(
-        createTransferCheckedInstruction(
-          fromATA,
-          USDC_MINT,
-          toATA,
-          publicKey!,
-          packages[selected]!.price * 10 ** mint.decimals,
-          mint.decimals
-        )
-      );
-
-      await sendTransaction(transaction, connection);
-    })().catch((err) => {
-      console.log(err);
-      toast.error("An Error Occoured");
-    });
-  };
+  useEffect(() => {
+    if (transaction && !data) {
+      mutate({
+        publicKey: publicKey!.toBase58(),
+        data: {
+          name: name!,
+          description: description!,
+          contact: contact!,
+          package: packages[selected]!.id,
+          transaction,
+        },
+      });
+    }
+  }, [
+    transaction,
+    data,
+    mutate,
+    publicKey,
+    name,
+    description,
+    contact,
+    selected,
+  ]);
 
   return (
     <Layout>
@@ -217,15 +180,11 @@ const Create = () => {
             </div>
           </div>
 
-          <div className="mt-16 mb-14 w-full max-w-md">
-            <button
-              className={`h-12 w-full rounded bg-white font-tt text-lg uppercase text-black disabled:cursor-not-allowed`}
-              disabled={name && description && contact ? false : true}
-              onClick={pay}
-            >
-              Pay
-            </button>
-          </div>
+          <Pay
+            enabled={!(name && description && contact)}
+            price={packages[selected]!.price}
+            setTransaction={setTransaction}
+          />
         </div>
       </div>
     </Layout>

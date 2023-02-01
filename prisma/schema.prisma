@@ -18,16 +18,28 @@ model Client {
     projects   Project[]
 }
 
-model Tier {
-    id   Int    @id @default(autoincrement())
-    name String
-}
-
 model Project {
-    id          Int    @id @default(autoincrement())
+    id          Int     @id @default(autoincrement())
     name        String
     description String
     contact     String
-    client      Client @relation(fields: [clientId], references: [id])
+    package     Package
+    transaction String
+    status      Status  @default(PENDING)
+    client      Client  @relation(fields: [clientId], references: [id])
     clientId    Int
+
+    @@index([clientId])
+}
+
+enum Package {
+    STARTER
+    MAIN
+    MEGA
+}
+
+enum Status {
+    PENDING
+    IN_PROGRESS
+    COMPLETED
 }
