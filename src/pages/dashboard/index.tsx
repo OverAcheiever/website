@@ -28,7 +28,7 @@ const Dashboard: NextPage = () => {
             ? data.projects.map((project, key) => (
                 <div
                   key={key}
-                  className="flex h-48 w-full cursor-pointer flex-col justify-between rounded-xl border-2 border-[#222] px-5 pt-6 pb-5 font-space transition-all  hover:border-[#333]"
+                  className="font-font-space flex h-48 w-full cursor-pointer flex-col justify-between rounded-xl border-2 border-[#222] px-5 pt-6 pb-5 transition-all  hover:border-[#333]"
                 >
                   <div className="pl-2 text-2xl font-bold">{project.name}</div>
                   <div className="flex gap-x-3">

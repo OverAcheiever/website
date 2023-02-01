@@ -75,7 +75,7 @@ const Create = () => {
 
   return (
     <Layout>
-      <div className="flex w-full justify-center font-space font-medium">
+      <div className="font-font-space flex w-full justify-center font-medium">
         <div className="flex w-full max-w-screen-xl flex-col items-center pt-16">
           <div className="text-center font-tt text-5xl uppercase">
             feedback <br /> request

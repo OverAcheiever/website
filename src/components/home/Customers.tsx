@@ -36,13 +36,13 @@ const Customers = () => {
               alt=""
               className="h-24 rounded-full border-4 border-white"
             />
-            <div className="space">@{customer.twitter}</div>
+            <div className="font-space">@{customer.twitter}</div>
           </div>
         ))}
       </div>
 
       <div className="absolute -bottom-5 flex w-full items-center justify-center">
-        <button className="space h-10 rounded-full bg-white px-8 text-black">
+        <button className="h-10 rounded-full bg-white px-8 font-space text-black">
           Customers
         </button>
       </div>

@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <div className="flex h-20 w-full items-center justify-between border-b border-[#111] px-8 font-tt text-3xl">
         DEAN&apos;S LIST
         <Link href="/dashboard/create">
-          <button className="h-10 rounded bg-white px-5 font-space text-lg font-bold text-black">
+          <button className="font-font-space h-10 rounded bg-white px-5 text-lg font-bold text-black">
             create
           </button>
         </Link>
