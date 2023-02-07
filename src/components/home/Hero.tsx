@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Hero = () => {
   return (
     <div className="relative flex h-screen w-full flex-col bg-[url('/images/hero.png')] bg-cover bg-no-repeat">
