@@ -5,6 +5,7 @@ import Hero from "@/components/home/Hero";
 import Testimonials from "@/components/home/Testimonials";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
