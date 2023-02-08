@@ -1,4 +1,21 @@
+.Footer_dl{
+	font-size: 1rem;
+	padding: 1.5rem 0 3rem 0;
+	background-color: #1a1f23;
+	background-image: radial-gradient(farthest-side at bottom left,#271d3b,transparent 900px),radial-gradient(farthest-corner at bottom right,#3a233f,transparent 1000px);
+	border: 5px solid #141414;
+}
+.bgc-dark { background-color: #1a1f23}
 .mw50{max-width: 50%;}
+.footer { margin: 1em;}
+.footer a { display: inline-flex; }
+.footer svg { width: 32px; height: 32px;}
+#sollo {font=weight: 800; font-size: 1.5em; padding-left: 0.5em;}
+.footer p{margin-top: 1em;}
+.footc { margin: 0 auto; text-align: left;}
+#foot2{text-align: right; padding-top: 1.25em; margin-right: 2rem;}
+#foot2 a{ padding-left: 1em;}
+.footc{padding-left: 2em; width: 100%;}
 
 @media screen and (max-width: 1024px) {
     .mw50{max-width: 75%;}
