@@ -20,8 +20,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="flex w-full flex-col items-center bg-[url('/images/testimonials/bg.png')] bg-cover pt-40">
-      <div className="text-center font-tt text-7xl ">
+    <div className="flex w-full flex-col items-center bg-[url('/images/testimonials/bg.png')] bg-cover pt-40" id="testimonials">
+      <div className="text-center font-tt text-7xl">
       GET BETTER WITH <br /> FEEDBACK
       </div>
       <div className="mt-10 text-left font-space text-xl mw50">
@@ -32,7 +32,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial, key) => (
           <div
             key={key}
-            className="border-[rgba(255,255,255, 0.5)] flex max-w-xs flex-col justify-between rounded border-[1px] bg-[rgba(255,255,255,0.1)] p-5 text-gray-200"
+            className="border-[rgba(255,255,255, 0.5)] flex max-w-xs flex-col justify-between rounded border-[1px] bg-[rgba(255,255,255,0.1)] p-5 text-gray-200 testimonial"
           >
             {testimonial.message}
 

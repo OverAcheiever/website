@@ -3,14 +3,15 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <div className="relative flex h-screen w-full flex-col bg-[url('/images/hero.png')] bg-cover bg-no-repeat">
-      <div className="flex h-24 w-full items-center pl-8 pt-5">
-        <div className="flex items-center gap-x-3">
-          <img src="/images/logo.png" alt="" className="h-14 w-14" />
+      <div className="flex h-24 w-full items-center pl-8 pt-5" id="head_logo">
+        <div className="flex items-center gap-x-3" id="logo">
+          <img src="/images/logo.png" alt="DEAN&apos;S LIST" className="h-14 w-14" />
           <div className="font-tt text-4xl">DEAN&apos;S LIST</div>
         </div>
       </div>
       <div className="flex h-full flex-col items-center justify-center">
-        <div className="text-center font-tt text-[7rem] leading-[1] ">
+        <div className="text-center font-tt text-[7rem] leading-[1] " id="hero_heading">
+          Get key <br />
           Feedback from <br />
           web3 power users
         </div>
