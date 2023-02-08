@@ -22,7 +22,7 @@ const Testimonials = () => {
   return (
     <div className="flex w-full flex-col items-center bg-[url('/images/testimonials/bg.png')] bg-cover pt-40" id="testimonials">
       <div className="text-center font-tt text-7xl">
-      GET BETTER WITH <br /> FEEDBACK
+      Become better with <br /> our help
       </div>
       <div className="mt-10 text-left font-space text-xl mw50">
       The Dean&apos;s List feedback platform provides a reliable and trustworthy space for you to receive valuable insights and suggestions from a diverse community of experts and users. By leveraging the power of the Web3 ecosystem, you can be confident that your feedback is secure, transparent, and protected against tampering. Whether you are a developer, entrepreneur, or simply looking to improve your project, the Dean&apos;s List provides the tools and resources you need to succeed. So why wait? <Link href="https://coinablepay.com/store/deans-list">Get started today</Link> and bring your project to the next level with the Dean&apos;s List! <br />{" "}
