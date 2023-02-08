@@ -10,13 +10,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex h-full flex-col items-center justify-center">
-        <div className="text-center font-tt text-[7rem] leading-[1] " id="hero_heading">
+        <div className="text-center font-tt text-[7rem] leading-[1] mb-24" id="hero_heading">
           Get key <br />
           Feedback from <br />
           web3 power users
         </div>
         <Link href="https://coinablepay.com/store/deans-list">
-        <button className="group mt-24 flex h-14 w-max items-center justify-center gap-x-2 rounded bg-white pl-8 pr-7 font-space text-lg font-medium text-black">
+        <button className="group flex h-14 w-max items-center justify-center gap-x-2 rounded bg-white pl-8 pr-7 font-space text-lg font-medium text-black">
           Get Started
           <svg
             xmlns="http://www.w3.org/2000/svg"

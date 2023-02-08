@@ -2,21 +2,41 @@
 
 @media screen and (max-width: 1024px) {
     .mw50{max-width: 75%;}
-    #hero_heading{font-size: 4em;}
+    #hero_heading,#join_heading{font-size: 3.5em; width: 80%; padding-bottom: 1.5rem;}
     #customers .customer:nth-child(n+5){display:none;}
     #testimonials .testimonial:nth-child(n+3){display:none;}
-    #testimonials .grid-cols-3{    grid-template-columns:repeat(2,minmax(0,1fr)); }
+    #testimonials .grid-cols-3{    grid-template-columns:repeat(2,minmax(0,1fr)); width: 90%; }
+
+    .pt-40{padding-top: 5rem !important;}
+    .py-20{padding-top: 3rem !important;}
+    .mb-24{margin-bottom: 2rem !important;}
+    .h-screen{height: auto !important;}
+    .h-full{padding-top: 2rem; padding-bottom: 3rem;}
+    .text-7xl{font-size: 3em !important;}
+
+    #joinus div.font-space{font-size: 1.2em;}
+    #join_heading{font-size: 3.25em; padding-bottom: 0.75rem;padding-top: 2.25rem;}  
+    #joinus .mt-10{margin-top: 1.25rem;}
 }
 
 @media screen and (max-width: 480px) {
 .mw50{max-width: 80%;}
 #__next{display:block; overflow: hidden; width: 100% !important;}
 
-#hero_heading{font-size: 2.25em; width: 60%; padding-bottom: 1.5rem;}
+#hero_heading{font-size: 2.35em; width: 60%; padding-bottom: 1.5rem;}
 #head_logo{padding-left: 1rem; width: 90%;}
 #head_logo .font-tt {margin: 0 auto; }
 #logo {margin: 0 auto; text-align: center; column-gap: 0.2rem; padding-left: 1.5rem;}
 #logo div.text-4xl{font-size: 1.75rem;}
+
+#joinus {padding-left: 1.5rem;}
+#joinus div.font-space{font-size: 0.95em;}
+#join_heading{font-size: 2.8em; width: 60%; padding-bottom: 0.75rem;padding-top: 2.25rem;}
+#joinus .pl-8 {padding-left: 1.25rem;}
+#joinus .pr-7 {padding-right: 1rem;}
+#joinus div.text-left{margin-left: 1rem;}
+#joinus .text-lg { font-size: 1rem;}
+#joinus .mt-10{margin-top: 1rem;}
 
 #customers .customer:nth-child(n+3){display:none;}
 #customers div.font-space{font-size: 0.9em;}
@@ -24,11 +44,11 @@
 .text-7xl{font-size: 2.5em !important;}
 .pt-40{padding-top: 5rem !important;}
 .py-20{padding-top: 3rem !important;}
-.mt-24{margin-top: 2rem !important;}
+.mb-24{margin-bottom: 2rem !important;}
 .h-screen{height: auto !important;}
 .h-full{padding-top: 2rem; padding-bottom: 3rem;}
 
-#testimonials div{width: 90%;}
+#testimonials div{width: 90%; }
 #testimonials .testimonial:nth-child(n+2){display:none;}
 #testimonials .grid-cols-3{grid-template-columns: none;}
 #testimonials .testimonial{width: 80%; margin: 0 auto; text-align: center;}
