@@ -3,6 +3,7 @@
 import Customers from "@/components/home/Customers";
 import Hero from "@/components/home/Hero";
 import Testimonials from "@/components/home/Testimonials";
+import Joinus from "@/components/home/Joinus";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
         <Hero />
         <Customers />
         <Testimonials />
+        <Joinus />
       </div>
     </>
   );
