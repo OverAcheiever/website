@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media (max-width: 600px) {
+    .startbutton {
+        padding: 0;
+        font-size: 13px;
+        margin-top: 4rem;
+        height: 3rem;
+        width: 9rem;
+    }
+}
