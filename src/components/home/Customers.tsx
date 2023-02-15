@@ -23,7 +23,7 @@ const Customers = () => {
     {
       image: "/images/customers/strata-protocol.jpg",
       twitter: "StrataProtocol",
-      soladex: "strata-protocal"
+      soladex: "strata-protocol"
     },
     {
       image: "/images/customers/everlend-finance.png",
@@ -40,7 +40,7 @@ const Customers = () => {
             <a href={`https://soladex.io/project/${customer.soladex}/`}>
               <img
                 src={customer.image}
-                alt=""
+                alt="{customer.soladex}"
                 className="h-24 rounded-full border-4 border-white"
               />
             </a>
