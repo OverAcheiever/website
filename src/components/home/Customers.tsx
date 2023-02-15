@@ -37,10 +37,10 @@ const Customers = () => {
       <div className="flex h-full w-full items-center justify-center gap-x-10">
         {customers.map((customer, key) => (
           <div className="flex flex-col items-center gap-y-3 customer" key={key}>
-            <a href={`https://soladex.io/project/${customer.soladex}/`}>
+            <a target="_blank" href={`https://soladex.io/project/${customer.soladex}/`}>
               <img
                 src={customer.image}
-                alt="{customer.soladex}"
+                alt={customer.soladex}
                 className="h-24 rounded-full border-4 border-white"
               />
             </a>
