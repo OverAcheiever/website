@@ -1,9 +1,14 @@
-import Wallet from "@/components/wallet";
-import { useWallet } from "@solana/wallet-adapter-react";
-import { api } from "@/utils/api";
+// Next
 import { NextPage } from "next";
+// React
 import { useEffect } from "react";
+// Api
+import { api } from "@/utils/api";
+// Solana SDK
+import { useWallet } from "@solana/wallet-adapter-react";
+// Components
 import Layout from "@/components/dashboard/Layout";
+import Wallet from "@/components/wallet";
 
 const Dashboard: NextPage = () => {
   const { publicKey } = useWallet();

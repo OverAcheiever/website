@@ -1,5 +1,6 @@
-import { USDC_MINT, TREASURY_MINT, connection } from "@/constants";
-import { api } from "@/utils/api";
+// Dependencies
+import toast from "react-hot-toast";
+// Solana SDK
 import {
   getAssociatedTokenAddressSync,
   getMint,
@@ -7,8 +8,12 @@ import {
 } from "@solana/spl-token";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { Transaction } from "@solana/web3.js";
+// Utils
+import { api } from "@/utils/api";
+// Constants
+import { USDC_MINT, TREASURY_MINT, connection } from "@/constants";
+// Types
 import type { Dispatch, SetStateAction } from "react";
-import toast from "react-hot-toast";
 
 const Pay = ({
   enabled,
