@@ -1,9 +1,14 @@
-import Wallet from "@/components/wallet";
-import { useWallet } from "@solana/wallet-adapter-react";
-import { api } from "@/utils/api";
+// Next
 import { NextPage } from "next";
-import { ReactNode, useEffect } from "react";
 import Link from "next/link";
+// React
+import { ReactNode, useEffect } from "react";
+// Solana SDK
+import { useWallet } from "@solana/wallet-adapter-react";
+// Components
+import Wallet from "@/components/wallet";
+// Utils
+import { api } from "@/utils/api";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { publicKey } = useWallet();

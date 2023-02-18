@@ -2,13 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+
+@font-face {
+  font-family: "localFont";
+  src: local("localFont"), url("./fonts/tt.woff2") format("woff");
+  font-weight: normal;
+}
 
 @media (max-width: 600px) {
-    .startbutton {
-        padding: 0;
-        font-size: 13px;
-        margin-top: 4rem;
-        height: 3rem;
-        width: 9rem;
-    }
+  .startbutton {
+    padding: 0;
+    font-size: 13px;
+    margin-top: 4rem;
+    height: 3rem;
+    width: 9rem;
+  }
 }

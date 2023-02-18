@@ -1,24 +1,26 @@
-import "../styles/globals.css";
-import type { AppType } from "next/dist/shared/lib/utils";
+import { Toaster } from "react-hot-toast";
+// Components
 import WalletProvider from "@/components/wallet/Provider";
-
-require("@solana/wallet-adapter-react-ui/styles.css");
-
-import localFont from "@next/font/local";
-import { Space_Grotesk } from "@next/font/google";
+// Api
 import { api } from "@/utils/api";
+// Stylesheet
+require("@solana/wallet-adapter-react-ui/styles.css");
+import "../styles/globals.css";
+import "../styles/custom.css";
 
-const tt = localFont({
-  src: "../styles/fonts/tt.woff2",
-  variable: "--font-tt",
-});
-
+// Fonts
+import { Space_Grotesk } from "@next/font/google";
+import localFont from "@next/font/local";
 const space = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space",
 });
-
-import { Toaster } from "react-hot-toast";
+const tt = localFont({
+  src: "../styles/fonts/tt.woff2",
+  variable: "--font-tt",
+});
+// Types
+import type { AppType } from "next/dist/shared/lib/utils";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
