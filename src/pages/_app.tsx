@@ -7,6 +7,7 @@ import { api } from "@/utils/api";
 require("@solana/wallet-adapter-react-ui/styles.css");
 import "../styles/globals.css";
 import "../styles/custom.css";
+import "../styles/spinner.css";
 
 // Fonts
 import { Space_Grotesk } from "@next/font/google";

@@ -34,7 +34,9 @@ const Holders: NextPage = () => {
         tokenAddress: tokenPublicKey,
       })
         .then((res) => {
-          setLoading(false);
+          {
+            setLoading(false);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -67,7 +69,8 @@ const Holders: NextPage = () => {
           <h1>Holders</h1>
         </div>
         {loading ? (
-          <Spinner />
+          // <Spinner />
+          <></>
         ) : (
           <>
             {holder == HolderEnum.Undefined ? (
